@@ -56,8 +56,12 @@ namespace Chess_Tournament_Calculator
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = listBox1.SelectedIndex;
-            richTextBox1.Text = games_of_player[index].PGN;
+            if (listBox1.SelectedItems.Count > 0)
+            {
+                int index = listBox1.SelectedIndex;
+                richTextBox1.Text = games_of_player[index].PGN;
+            }
+            
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
