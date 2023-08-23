@@ -161,7 +161,7 @@ namespace Chess_Tournament_Calculator
             //-------------------------------------------------------
             Players.Clear();
             // fill the players from the listbox to the players list
-            
+
             foreach (string name in listBox_players.Items) { Players.Add(new Player(name, shuffleColor)); shuffleColor = !shuffleColor; }
             // Handle odd player count
             OddPlayers = Players.Count % 2 == 0 ? 0 : 1;
@@ -455,7 +455,7 @@ namespace Chess_Tournament_Calculator
                     string Player2Name = activePlayers[player2Index].Name;
 
                     // Flipping logic remains unchanged
-                    
+
                     if (Flip)
                     {
                         match = $"{Player2Name} - {Player1Name}";
@@ -486,8 +486,8 @@ namespace Chess_Tournament_Calculator
                     string whitePlayerName = clickedButton.Text.Split(" - ")[0];
                     string blackPlayerName = clickedButton.Text.Split(" - ")[1];
                     bool isDisqualified = false;
-                    
-                      
+
+
                     Game gameToBeAdded = new()
                     {
                         Player_White = whitePlayerName,
@@ -499,7 +499,7 @@ namespace Chess_Tournament_Calculator
                         gameToBeAdded.Result = 1.0;
                         gameToBeAdded.End_Reason = dg.reason;
                         if (dg.reason == "Disqualification") { isDisqualified = true; }
-                            EliminatePlayerByName(blackPlayerName, isDisqualified);
+                        EliminatePlayerByName(blackPlayerName, isDisqualified);
                     }
                     if (dg.button_blackwin.Checked)
                     {
@@ -523,7 +523,7 @@ namespace Chess_Tournament_Calculator
                         }
 
                     }
-               
+
                     //--------------------------------------
                     Refresh_Standings();
                     panel_Pairings.Controls.Remove(clickedButton);

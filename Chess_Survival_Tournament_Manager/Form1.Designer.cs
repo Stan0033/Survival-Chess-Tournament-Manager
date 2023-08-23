@@ -173,11 +173,12 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Brown;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(454, 8);
             label1.Name = "label1";
-            label1.Size = new Size(440, 225);
+            label1.Size = new Size(442, 227);
             label1.TabIndex = 10;
             label1.Text = resources.GetString("label1.Text");
             // 
@@ -325,7 +326,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Survival Chess Tournament Manager";
+            Text = "Survival Knockout Chess Tournament Manager";
             Load += Form_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
